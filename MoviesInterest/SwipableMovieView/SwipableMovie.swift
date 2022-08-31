@@ -13,7 +13,6 @@ class SwipableMovie: UIView {
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDescription: UITextView!
-    
     @IBOutlet weak var voteAverage: UILabel!
     
     var item : Movie?{

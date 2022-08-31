@@ -18,7 +18,6 @@ extension SearchViewController:UISearchResultsUpdating{
         searchDelayTimer = Timer.scheduledTimer(withTimeInterval: 0.2, repeats: false) { [weak self] _ in
             self?.loadMovies(forQuery: searchController.searchBar.text) { movies in
                 self?.movies = movies
-                //dself?.scrollToTopCell(withAnimation: false)
             }
         }
     }

@@ -52,9 +52,7 @@ class MoviesHomeViewController: UIViewController {
         
         //MARK: Title set
         self.title = String(describing: NavigationTitle.init(rawValue: 0)).uppercased()
-        
-       let movie = Movie(id: 5, title: "Superman", genereIDs: [28], voteAverage: 0, overview: "", posterPath: "")
-        print(movie.genreString())
+
     }
     
     //MARK: View Will appear

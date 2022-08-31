@@ -31,29 +31,30 @@ class DetailDataSource: NSObject {
     
     init(data:CompleteMovieDetailModal?) {
         
-        let nameAndPictureItem = MovieModelNamePictureItem(name: (data?.movieDetail.title)!, pictureUrl: (data?.movieDetail.posterPath ?? ""), releaseDate: "", genre: (data?.movieDetail.genreString())!, overView: (data?.movieDetail.overview)!)
-        items.append(nameAndPictureItem)
-        
-        var videosArray = Array<MovieVideo>()
-        
-        if let unwrapedVideos = data?.movieVideos.results {
-            for video in unwrapedVideos{
-                let newVideo = MovieVideo(name: video.name, key: video.key)
-                videosArray.append(newVideo)
-            }
-            let movieVideoContent = MovieVideoContent(videosArray: videosArray)
-            self.items.append(movieVideoContent)
+        if let movieData = data {
+            let nameAndPictureItem = MovieModelNamePictureItem(name: (movieData.movieDetail.title)!, pictureUrl: (movieData.movieDetail.posterPath ?? ""), releaseDate: "", genre: (movieData.movieDetail.genreString()), overView: (movieData.movieDetail.overview))
+            items.append(nameAndPictureItem)
         }
-        var creditArray = Array<SingleCredit>()
-        if let unrappedCredit = data?.credits.cast {
-            for cred in unrappedCredit{
-                let newCredit = SingleCredit(charecterName: cred.character, realName: cred.name, image: cred.profilePath ?? "")
-                creditArray.append(newCredit)
+            var videosArray = Array<MovieVideo>()
+            
+            if let unwrapedVideos = data?.movieVideos.results {
+                for video in unwrapedVideos{
+                    let newVideo = MovieVideo(name: video.name, key: video.key)
+                    videosArray.append(newVideo)
+                }
+                let movieVideoContent = MovieVideoContent(videosArray: videosArray)
+                self.items.append(movieVideoContent)
             }
+            var creditArray = Array<SingleCredit>()
+            if let unrappedCredit = data?.credits.cast {
+                for cred in unrappedCredit{
+                    let newCredit = SingleCredit(charecterName: cred.character, realName: cred.name, image: cred.profilePath ?? "")
+                    creditArray.append(newCredit)
+                }
+            }
+            let movieCreditContent = MovieCastings(castingArray: creditArray)
+            self.items.append(movieCreditContent)
         }
-        let movieCreditContent = MovieCastings(castingArray: creditArray)
-        self.items.append(movieCreditContent)
-    }
 }
 
 class MovieViewModal: NSObject {

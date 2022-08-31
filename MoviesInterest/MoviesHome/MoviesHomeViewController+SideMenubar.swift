@@ -32,17 +32,11 @@ extension MoviesHomeViewController:MoreMenuBarDelegate{
     
     func tappedOnEvent(sender: UIControl, sideMenubar: SideMenubar) {
         sideMenubarLeft.hide()
-        let cat = Category.init(rawValue: sender.tag)
-//        if cat == .search {
-//            perform(segue: .showSearch, sender: nil)
-//        }
-//        else{
-//
-//            }
-//        }
+        if let cat = Category.init(rawValue: sender.tag) {
         self.title = String(describing: NavigationTitle.init(rawValue: sender.tag)).uppercased()
-        loadMovies(category: cat!) { [weak self] movies in
+            loadMovies(category: cat) { [weak self] movies in
             self?.movies = movies
+        }
         }
     }
     

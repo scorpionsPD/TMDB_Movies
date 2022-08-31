@@ -40,15 +40,6 @@ struct MovieDetail: Codable {
         case voteAverage = "vote_average"
         case voteCount = "vote_count"
     }
-    
-    func genreString() -> String {
-        var genreStr = String()
-        for item in self.genres {
-            genreStr.append(item.name)
-            genreStr.append("/")
-        }
-        return String(genreStr.dropLast())
-    }
 }
 
 struct BelongsToCollection: Codable {

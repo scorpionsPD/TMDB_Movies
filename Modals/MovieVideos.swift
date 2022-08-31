@@ -9,7 +9,7 @@
 import Foundation
 
 struct MovieVideos: Codable {
-    let id: Int
+    private let id: Int
     let results: [Result]
     
     struct Result: Codable {

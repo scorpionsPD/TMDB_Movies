@@ -313,18 +313,18 @@
 		45BDDD9922B0F91E0021C508 /* CellClasses */ = {
 			isa = PBXGroup;
 			children = (
+				45BDDDA222B0F91E0021C508 /* MovieHeaderCell.swift */,
 				45BDDD9A22B0F91E0021C508 /* MovieHeaderCell.xib */,
 				45BDDD9B22B0F91E0021C508 /* CastCollectionViewCell.swift */,
-				45BDDD9C22B0F91E0021C508 /* SearchTableViewCell.xib */,
-				45BDDD9D22B0F91E0021C508 /* CastCrewTableViewCell.xib */,
 				45BDDD9E22B0F91E0021C508 /* CastCollectionViewCell.xib */,
-				45BDDD9F22B0F91E0021C508 /* VideoCollectionViewCell.xib */,
-				45BDDDA022B0F91E0021C508 /* MovieVideosTableViewCell.xib */,
-				45BDDDA122B0F91E0021C508 /* CastCrewTableViewCell.swift */,
-				45BDDDA222B0F91E0021C508 /* MovieHeaderCell.swift */,
-				45BDDDA322B0F91E0021C508 /* VideoCollectionViewCell.swift */,
 				45BDDDA422B0F91E0021C508 /* SearchTableViewCell.swift */,
+				45BDDD9C22B0F91E0021C508 /* SearchTableViewCell.xib */,
+				45BDDDA122B0F91E0021C508 /* CastCrewTableViewCell.swift */,
+				45BDDD9D22B0F91E0021C508 /* CastCrewTableViewCell.xib */,
+				45BDDDA322B0F91E0021C508 /* VideoCollectionViewCell.swift */,
+				45BDDD9F22B0F91E0021C508 /* VideoCollectionViewCell.xib */,
 				45BDDDA522B0F91E0021C508 /* MovieVideosTableViewCell.swift */,
+				45BDDDA022B0F91E0021C508 /* MovieVideosTableViewCell.xib */,
 			);
 			path = CellClasses;
 			sourceTree = "<group>";

@@ -13,12 +13,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ratingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="b7p-71-ml6">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ratingIcon" translatesAutoresizingMaskIntoConstraints="NO" id="b7p-71-ml6">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="517.5"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <gestureRecognizers/>
-                    <constraints>
-                        <constraint firstAttribute="width" secondItem="b7p-71-ml6" secondAttribute="height" multiplier="0.8:1" id="PCN-Mj-TKR"/>
-                    </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                             <real key="value" value="0.0"/>
@@ -31,19 +29,25 @@
                         <outletCollection property="gestureRecognizers" destination="TfO-wm-ocF" appends="YES" id="2Ib-KL-yXH"/>
                     </connections>
                 </imageView>
-                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9t-WW-fcc">
-                    <rect key="frame" x="0.0" y="517.5" width="414" height="376.5"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-OK-w7k">
+                    <rect key="frame" x="0.0" y="567" width="414" height="45"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.1019607931" green="0.1019607931" blue="0.109803915" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="some text" translatesAutoresizingMaskIntoConstraints="NO" id="F9t-WW-fcc">
+                    <rect key="frame" x="0.0" y="608" width="414" height="288"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.10313168913125992" green="0.10322485119104385" blue="0.10829409211874008" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <color key="textColor" systemColor="groupTableViewBackgroundColor"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7.1 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hh9-Pn-2H5">
-                    <rect key="frame" x="331" y="482" width="68" height="21"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="68" id="Esr-Ty-9bN"/>
-                        <constraint firstAttribute="height" constant="21" id="nqc-rq-d4q"/>
-                    </constraints>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7.1 / 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hh9-Pn-2H5">
+                    <rect key="frame" x="326" y="538" width="68" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
@@ -68,27 +72,8 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </label>
-                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgl-OK-w7k">
-                    <rect key="frame" x="0.0" y="427" width="414" height="42"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" red="0.15322110056877136" green="0.16770139336585999" blue="0.19600763916969299" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <constraints>
-                <constraint firstItem="b7p-71-ml6" firstAttribute="baseline" secondItem="Hh9-Pn-2H5" secondAttribute="firstBaseline" constant="19.5" id="1AV-e4-bL0"/>
-                <constraint firstItem="F9t-WW-fcc" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="2jS-tO-NAn"/>
-                <constraint firstAttribute="bottom" secondItem="F9t-WW-fcc" secondAttribute="bottom" id="O7U-zf-tPQ"/>
-                <constraint firstAttribute="bottom" secondItem="F9t-WW-fcc" secondAttribute="bottom" constant="2" id="RBL-kz-DKo"/>
-                <constraint firstAttribute="trailing" secondItem="b7p-71-ml6" secondAttribute="trailing" id="VT6-Tu-ZY0"/>
-                <constraint firstItem="F9t-WW-fcc" firstAttribute="top" secondItem="b7p-71-ml6" secondAttribute="bottom" id="Vsx-6J-wbh"/>
-                <constraint firstItem="b7p-71-ml6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WED-ig-hKA"/>
-                <constraint firstItem="Hh9-Pn-2H5" firstAttribute="trailing" secondItem="b7p-71-ml6" secondAttribute="trailing" constant="-15" id="Wrg-ir-85v"/>
-                <constraint firstItem="b7p-71-ml6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dnh-Oa-RjL"/>
-                <constraint firstAttribute="trailing" secondItem="F9t-WW-fcc" secondAttribute="trailing" id="kpS-Vw-x9S"/>
-            </constraints>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="number" keyPath="layer.shadowOpacity">
                     <real key="value" value="0.5"/>
@@ -116,8 +101,5 @@
     </objects>
     <resources>
         <image name="ratingIcon" width="25" height="25"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

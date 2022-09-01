@@ -23,20 +23,13 @@ class MovieDetailPage: UIViewController {
     }()
     
     var selectedMovie:Movie!{
-        
         didSet{
-            
             //self.view.addSubview(self.detailsTableView)
             self.view.isUserInteractionEnabled = false
-            
         }
     }
-    
     override func viewDidLoad() {
         self.registerNib()
-        
-    
-        
         guard let movie = selectedMovie else {return}
         
         loadVideoDetail(movie: movie) { (videos) in
@@ -50,7 +43,6 @@ class MovieDetailPage: UIViewController {
                 }
             })
         }
-
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -76,8 +68,4 @@ class MovieDetailPage: UIViewController {
                let nibCasting = UINib.init(nibName: String(describing: CastCrewTableViewCell.self), bundle: nil)
         detailsTableView.register(nibCasting, forCellReuseIdentifier: String(describing: CastCrewTableViewCell.self))
     }
-}
-
-extension MovieDetail {
-    
 }

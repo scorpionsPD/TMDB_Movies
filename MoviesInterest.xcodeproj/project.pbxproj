@@ -27,7 +27,6 @@
 		45BDDD8022B0F8CB0021C508 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6822B0F8CB0021C508 /* Enums.swift */; };
 		45BDDD8122B0F8CB0021C508 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6922B0F8CB0021C508 /* UserDefaultsManager.swift */; };
 		45BDDD8222B0F8CB0021C508 /* DebugPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6A22B0F8CB0021C508 /* DebugPrint.swift */; };
-		45BDDD8322B0F8CB0021C508 /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6B22B0F8CB0021C508 /* Instantiable.swift */; };
 		45BDDD8422B0F8CB0021C508 /* ApiKeyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6C22B0F8CB0021C508 /* ApiKeyStore.swift */; };
 		45BDDD8522B0F8CB0021C508 /* Segue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6D22B0F8CB0021C508 /* Segue.swift */; };
 		45BDDD8622B0F8CB0021C508 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45BDDD6F22B0F8CB0021C508 /* Resource.swift */; };
@@ -67,6 +66,8 @@
 		5C813D7851F794155C928716 /* Pods_MoviesInterest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50F11DB33D72D7D7449F196B /* Pods_MoviesInterest.framework */; };
 		F34D433C28BBBDF8009E8E29 /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D433B28BBBDF8009E8E29 /* Structs.swift */; };
 		F34D433E28BBCA98009E8E29 /* UIView+Bounce.swift in Sources */ = {isa = PBXBuildFile; fileRef = F34D433D28BBCA98009E8E29 /* UIView+Bounce.swift */; };
+		F388048428C0D9D20029B11B /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = F388048328C0D9D20029B11B /* Reachability.swift */; };
+		F388048628C0E01A0029B11B /* Instantiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F388048528C0E01A0029B11B /* Instantiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,7 +94,6 @@
 		45BDDD6822B0F8CB0021C508 /* Enums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		45BDDD6922B0F8CB0021C508 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		45BDDD6A22B0F8CB0021C508 /* DebugPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPrint.swift; sourceTree = "<group>"; };
-		45BDDD6B22B0F8CB0021C508 /* Instantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 		45BDDD6C22B0F8CB0021C508 /* ApiKeyStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiKeyStore.swift; sourceTree = "<group>"; };
 		45BDDD6D22B0F8CB0021C508 /* Segue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Segue.swift; sourceTree = "<group>"; };
 		45BDDD6F22B0F8CB0021C508 /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
@@ -134,6 +134,8 @@
 		E8FD576F69BE082F66687CCB /* Pods-MoviesInterest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoviesInterest.release.xcconfig"; path = "Target Support Files/Pods-MoviesInterest/Pods-MoviesInterest.release.xcconfig"; sourceTree = "<group>"; };
 		F34D433B28BBBDF8009E8E29 /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		F34D433D28BBCA98009E8E29 /* UIView+Bounce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Bounce.swift"; sourceTree = "<group>"; };
+		F388048328C0D9D20029B11B /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		F388048528C0E01A0029B11B /* Instantiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Instantiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,9 +237,9 @@
 				45BDDD6622B0F8CB0021C508 /* AlertMessage.swift */,
 				45BDDD6722B0F8CB0021C508 /* GenreTypes.swift */,
 				45BDDD6822B0F8CB0021C508 /* Enums.swift */,
+				F388048528C0E01A0029B11B /* Instantiable.swift */,
 				45BDDD6922B0F8CB0021C508 /* UserDefaultsManager.swift */,
 				45BDDD6A22B0F8CB0021C508 /* DebugPrint.swift */,
-				45BDDD6B22B0F8CB0021C508 /* Instantiable.swift */,
 				45BDDD6C22B0F8CB0021C508 /* ApiKeyStore.swift */,
 				45BDDD6D22B0F8CB0021C508 /* Segue.swift */,
 				F34D433B28BBBDF8009E8E29 /* Structs.swift */,
@@ -251,6 +253,7 @@
 				45BDDD6F22B0F8CB0021C508 /* Resource.swift */,
 				45BDDD7022B0F8CB0021C508 /* ImageDownloader.swift */,
 				45BDDD7122B0F8CB0021C508 /* Webservice.swift */,
+				F388048328C0D9D20029B11B /* Reachability.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -483,7 +486,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F34D433C28BBBDF8009E8E29 /* Structs.swift in Sources */,
-				45BDDD8322B0F8CB0021C508 /* Instantiable.swift in Sources */,
 				45BDDD7722B0F8CB0021C508 /* Movie.swift in Sources */,
 				45BDDDC322B0F91E0021C508 /* MovieVideosTableViewCell.swift in Sources */,
 				45BDDD8822B0F8CB0021C508 /* Webservice.swift in Sources */,
@@ -508,8 +510,10 @@
 				45BDDD4322B0F8560021C508 /* AppDelegate.swift in Sources */,
 				45BDDD7622B0F8CB0021C508 /* MovieCredits.swift in Sources */,
 				45BDDDC422B0F91E0021C508 /* MovieDetailPage.swift in Sources */,
+				F388048628C0E01A0029B11B /* Instantiable.swift in Sources */,
 				45BDDD8A22B0F8CB0021C508 /* String+DateFormatter.swift in Sources */,
 				45BDDDB622B0F91E0021C508 /* DetailDataSource.swift in Sources */,
+				F388048428C0D9D20029B11B /* Reachability.swift in Sources */,
 				45BDDD8922B0F8CB0021C508 /* String+Locale.swift in Sources */,
 				45BDDDB322B0F91E0021C508 /* SearchController.swift in Sources */,
 				F34D433E28BBCA98009E8E29 /* UIView+Bounce.swift in Sources */,

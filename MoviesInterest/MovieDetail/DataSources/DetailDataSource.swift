@@ -27,7 +27,7 @@ protocol MovieViewModelItem {
 
 class DetailDataSource: NSObject {
     
-    var items = [MovieViewModelItem]()
+    internal var items = [MovieViewModelItem]()
     
     init(data:CompleteMovieDetailModal?) {
         
@@ -58,22 +58,22 @@ class DetailDataSource: NSObject {
 }
 
 class MovieViewModal: NSObject {
-    var items = [MovieViewModelItem]()
+    internal var items = [MovieViewModelItem]()
     
 }
 class MovieModelNamePictureItem: MovieViewModelItem {
-    var type: MovieModelItemType {
+    internal var type: MovieModelItemType {
         return .nameAndPicture
     }
-    var rowCount: Int {
+    internal var rowCount: Int {
         return 1
     }
     
-    var name: String
-    var genre: String
-    var releaseDate: String
-    var pictureUrl: String?
-    var overView: String
+    internal var name: String
+    internal var genre: String
+    internal var releaseDate: String
+    internal var pictureUrl: String?
+    internal var overView: String
     
     init(name: String, pictureUrl: String,releaseDate: String,genre: String,overView: String) {
         self.name = name
@@ -85,13 +85,13 @@ class MovieModelNamePictureItem: MovieViewModelItem {
 }
 
 class MovieVideoContent: MovieViewModelItem {
-    var type: MovieModelItemType{
+    internal var type: MovieModelItemType{
         return .videos
     }
-    var rowCount: Int{
+    internal var rowCount: Int{
         return 1
     }
-    var videosArray: [MovieVideo]
+    internal var videosArray: [MovieVideo]
 
     init(videosArray: [MovieVideo]) {
         self.videosArray = videosArray
@@ -99,15 +99,15 @@ class MovieVideoContent: MovieViewModelItem {
 }
 
 class MovieCastings: MovieViewModelItem {
-    var type: MovieModelItemType{
+    internal var type: MovieModelItemType{
         return .casting
     }
     
-    var rowCount: Int{
+    internal var rowCount: Int{
         return 1
     }
     
-    var castingArray: [SingleCredit]
+    internal var castingArray: [SingleCredit]
     
     init(castingArray: [SingleCredit]) {
         self.castingArray = castingArray
